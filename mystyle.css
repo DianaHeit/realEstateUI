@@ -1,0 +1,309 @@
+body{
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+main {
+    padding: 0 70px;
+}
+
+
+@media (max-width: 650px) {
+  main {
+   padding: 20px;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+.navbar-form {
+
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#myCarousel {
+  position: relative;
+}
+
+.carousel-inner {
+  max-width: 100%;
+
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+display: block;
+height: 100vh;
+line-height: 1;
+width: 100%; // Add this
+}
+
+.text-block {
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 500px;
+  height: 200px;
+}
+
+
+.btn-default{
+  margin-bottom: 10px;
+}
+
+
+
+.text-block2 {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .text-block {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-default{
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  #myCarousel {
+    display: none;
+  }
+
+  .text-block2 {
+    display: block;
+    position: fixed;
+    margin-top: 50px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: auto;
+    z-index: 200;
+  }
+
+  h1{
+    font-size: 2.5rem;
+
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .start-feature{
+    margin-top: 290px;
+  }
+}
+
+
+.form-container {
+  margin: 1.5rem;
+}
+
+
+/* Team */
+
+.team-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.avatar{
+  border-radius: 20px;
+  width:300px;
+  height:300px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  border-radius: 20px;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #black;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  border-radius: 20px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  border-radius: 20px;
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  border-radius: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  border-radius: 20px;
+  background-color: #gray;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  border-radius: 20px;
+  background-color: gray;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+/* Testimonials container */
+
+.testimonials-container {
+
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  text-align: center;
+  color: #3c4245;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#a {background-color: #eee;}
+#News {background-color: #eee;}
+#Contact {background-color: #eee;}
+#About {background-color: #eee;}
+
+
+/* Logos */
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.logo-container img {
+  width: 150px;
+}
+
+
+.jumbotron{
+  padding-top: 120px;
+  margin-bottom: 0;
+  background-color: #00818a;
+  color: #eee;
+}
+
+.jumbotron a {
+  color: #000;
+}
+
+.jumbotron a:hover {
+  color: #fff;
+}
+
+.jumbotron a:visited{
+  color: #000;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+.breadcrumb a {
+    color: teal;
+}
+
+form {
+  padding: 30px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+address {
+  padding: 50px;
+}
